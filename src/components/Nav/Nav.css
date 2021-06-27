@@ -1,0 +1,21 @@
+.nav-container {
+  font-family: "Cairo", sans-serif;
+  margin: 0px;
+  width: 100%;
+  padding-left: 10%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #006d77;
+}
+
+.nav-header {
+  padding: 0;
+  margin: 0;
+  color: #edf6f9;
+  font-size: 36px;
+  font-weight: bold;
+}
+p {
+  padding: 0;
+  margin: 0px;
+}
