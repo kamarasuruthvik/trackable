@@ -1,0 +1,33 @@
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: 2s ease-in all;
+  margin: 50px 0;
+}
+
+.search-bar {
+  font-family: "Cairo", sans-serif;
+  font-size: 24px;
+  font-weight: regular;
+  padding: 8px 32px;
+  width: 40%;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #ffddd2;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.search-button {
+  width: 10%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #e29578;
+
+  font-family: "Cairo", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+}
