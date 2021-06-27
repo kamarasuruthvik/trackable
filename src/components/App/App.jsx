@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import IntroComponent from '../IntroComponent/IntroComponent';
 import Nav from '../Nav/Nav';
+import ResultContainer from '../ResultContainer/ResultContainer';
 import Search from '../Search/Search';
 import './App.css';
 const API_KEY = 
@@ -11,19 +12,21 @@ const APP_ID=
 const URL=
 'https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=d5f626b8&app_key=978571a3bc397cf4cf7d8b0aab69651d'
 const App =()=>{
-    const [recipes,setRecipes] = useState([]);
+    const [ recipes, setRecipes] = useState([]);
 
 
 
     useEffect(()=>{
         getRecipes();
+
     },[]);
+
+
     const getRecipes=async ()=>{
         const response = await fetch(URL);
         const data = await response.json();
         setRecipes(data.hits);
-        console.log(recipes);
-    }
+    };
 
     return(
         <div className="app-container">
@@ -31,8 +34,11 @@ const App =()=>{
             {/* <IntroComponent/> */}
 
             <Search/>
-
+            <ResultContainer recipes={recipes}/>
             
+
+
+
         </div>
         
         );
