@@ -1,0 +1,14 @@
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 300px;
+  height: 300px;
+}
+
+.recipe-image {
+  width: 200px;
+  height: 200px;
+}
