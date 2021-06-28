@@ -9,18 +9,17 @@ const API_KEY =
 const APP_ID= 
 'd5f626b8';
 
-const URL=
-'https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=d5f626b8&app_key=978571a3bc397cf4cf7d8b0aab69651d'
+
 const App =()=>{
     const [ recipes, setRecipes] = useState([]);
     const [ query, setQuery] = useState('');
-    
-
-
+    const [searchTerm,setSearchTerm]= useState('');
+    const URL=
+    'https://api.edamam.com/api/recipes/v2?type=public&q='+ query +'&app_id=d5f626b8&app_key=978571a3bc397cf4cf7d8b0aab69651d';
     useEffect(()=>{
+        console.log(URL);
         getRecipes();
-
-    },[]);
+    },[query]);
 
 
     const getRecipes=async ()=>{
@@ -31,7 +30,14 @@ const App =()=>{
     };
 
     const searchQuery=e=>{
-        console.log(e.target.value);
+        
+        return setSearchTerm(e.target.value);
+    }
+
+    const submitQuery=e=>{
+        e.preventDefault();
+        console.log(searchTerm);
+        setQuery(searchTerm);
     }
 
     return(
@@ -39,7 +45,7 @@ const App =()=>{
             <Nav/>
             {/* <IntroComponent/> */}
 
-            <Search searchQuery={searchQuery}/>
+            <Search searchQuery={searchQuery} submitQuery={submitQuery} />
             <ResultContainer recipes={recipes}/>
             
 
