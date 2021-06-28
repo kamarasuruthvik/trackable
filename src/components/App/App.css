@@ -2,3 +2,8 @@
   margin: 0px;
   font-family: "Cairo", sans-serif;
 }
+
+.app-container {
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+}

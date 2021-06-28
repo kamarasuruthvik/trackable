@@ -8,17 +8,26 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 10px;
   background: #f5f3f4;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.recipe-card:hover {
+  transform: scale(1.1);
 }
 
 .recipe-image {
   width: 100%;
   height: 200px;
   margin: 0;
+  border-radius: 10px;
 }
 
 .recipe-name,
-.recipe-add-button {
+.recipe-add-button,
+.view-more-container {
   font-family: "Montserrat", sans-serif;
+  margin: 2px;
 }
 
 .recipe-name {
@@ -41,7 +50,7 @@
 .add-recipe {
   background: #e5383b;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   width: 100%;
   border-radius: 20px;
@@ -51,4 +60,16 @@
   outline: none;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.view-more-container {
+  font-weight: regular;
+  font-size: 14px;
+  color: #0077b6;
+  margin-top: 5px;
+}
+
+.add-recipe:hover,
+.view-more-container:hover {
+  cursor: pointer;
 }
