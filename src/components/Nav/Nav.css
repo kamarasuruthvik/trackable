@@ -1,11 +1,12 @@
 .nav-container {
   font-family: "Cairo", sans-serif;
   margin: 0px;
-  width: 100%;
+  /* width: 100%; */
   padding-left: 10%;
   padding-top: 8px;
   padding-bottom: 8px;
   background: #f5f3f4;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .nav-header {
@@ -18,4 +19,5 @@
 p {
   padding: 0;
   margin: 0px;
+  width: auto;
 }

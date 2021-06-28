@@ -6,7 +6,7 @@ const Nav = ()=>{
         <div className="nav-container">
             <div className="nav-header">
                 <p>
-                    Trackable
+                    Trackable 🎯
                 </p>
             </div>
         </div>
