@@ -3,7 +3,12 @@ import './IntroComponent.css'
 const IntroComponent = ()=>{
     return(
         <div className="intro-container">
-            <h2>This is the description container</h2>
+            <div className="header-container">
+                <h2 className="header">Track your calories while finding new recipes</h2>
+            </div>
+            <div className="image-container">
+        
+            </div>
         </div>
     );
 }

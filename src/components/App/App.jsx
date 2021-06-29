@@ -14,8 +14,12 @@ const App =()=>{
     const [ recipes, setRecipes] = useState([]);
     const [ query, setQuery] = useState('');
     const [searchTerm,setSearchTerm]= useState('');
+    const [loadingSpinner, setLoadingSpinner] = useState(false);
+
     const URL=
     'https://api.edamam.com/api/recipes/v2?type=public&q='+ query +'&app_id=d5f626b8&app_key=978571a3bc397cf4cf7d8b0aab69651d';
+    
+    
     useEffect(()=>{
         console.log(URL);
         getRecipes();
@@ -26,6 +30,7 @@ const App =()=>{
         const response = await fetch(URL);
         const data = await response.json();
         setRecipes(data.hits);
+        setLoadingSpinner(false);
         console.log(data.hits);
     };
 
@@ -36,19 +41,23 @@ const App =()=>{
 
     const submitQuery=e=>{
         e.preventDefault();
-        console.log(searchTerm);
+        setLoadingSpinner(true);
         setQuery(searchTerm);
     }
 
     return(
         <div className="app-container">
             <Nav/>
-            {/* <IntroComponent/> */}
-
-            <Search searchQuery={searchQuery} submitQuery={submitQuery} />
-            <ResultContainer recipes={recipes}/>
+            <IntroComponent/>
             
 
+             {/* <Search searchQuery={searchQuery} submitQuery={submitQuery} />
+            {
+                loadingSpinner?<div className="loading-spinner"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>:<ResultContainer recipes={recipes} />
+            } */}
+            
+            
+            
 
 
         </div>
