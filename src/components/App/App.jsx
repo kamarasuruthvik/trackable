@@ -51,10 +51,10 @@ const App =()=>{
             <IntroComponent/>
             
 
-             {/* <Search searchQuery={searchQuery} submitQuery={submitQuery} />
+             <Search searchQuery={searchQuery} submitQuery={submitQuery} />
             {
                 loadingSpinner?<div className="loading-spinner"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>:<ResultContainer recipes={recipes} />
-            } */}
+            }
             
             
             
