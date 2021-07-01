@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BMRcalculator from '../BMRcalculator/BMRcalculator';
 import IntroComponent from '../IntroComponent/IntroComponent';
 import Nav from '../Nav/Nav';
 import ResultContainer from '../ResultContainer/ResultContainer';
@@ -49,13 +50,13 @@ const App =()=>{
         <div className="app-container">
             <Nav/>
             <IntroComponent/>
-            
+            <BMRcalculator/>
 
-             <Search searchQuery={searchQuery} submitQuery={submitQuery} />
+             {/* <Search searchQuery={searchQuery} submitQuery={submitQuery} />
             {
                 loadingSpinner?<div className="loading-spinner"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>:<ResultContainer recipes={recipes} />
             }
-            
+             */}
             
             
 

@@ -1,0 +1,48 @@
+.bmr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bmr-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.bmr-description {
+  background: #457b9d;
+}
+
+.header {
+  margin: 0px;
+  color: #dee2e6 !important;
+  text-align: center;
+  padding: 30px;
+}
+
+.content {
+  margin: 0px 40px 30px 50px;
+  font-weight: regular;
+  font-size: 20px;
+  color: #edf6f9;
+}
+
+.highlight {
+  color: #f8f9fa;
+  font-weight: semi-bold;
+  font-size: 30px;
+}
+.punchline {
+  color: #f8f9fa;
+  font-weight: bold;
+
+  font-size: 25px;
+}
