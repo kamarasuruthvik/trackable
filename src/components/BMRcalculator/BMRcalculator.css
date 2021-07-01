@@ -22,11 +22,13 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.header {
+.bmr-calculator-header {
   margin: 0px;
   color: #dee2e6 !important;
   text-align: center;
   padding: 30px;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .content {

@@ -8,7 +8,7 @@ const BMRcalculator=()=>{
             <div className="bmr-container">
             <div className="bmr-description">
                 
-                <h3 className="header">
+                <h3 className="bmr-calculator-header">
                     What is BMR?
                 </h3>
                

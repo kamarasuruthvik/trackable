@@ -1,0 +1,16 @@
+.bmr-form {
+  height: 100%;
+  width: 50%;
+  background: #e0fbfc;
+  padding: 0;
+  margin: 0;
+}
+
+.bmr-form-header {
+  margin: 0px;
+  color: #dee2e6;
+  text-align: center;
+  padding: 30px;
+  font-size: 36px;
+  font-weight: bold;
+}
