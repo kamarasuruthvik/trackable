@@ -7,6 +7,7 @@
 
 .bmr-container {
   width: 90%;
+  background: #f1faee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,12 +15,12 @@
   margin: 0;
   padding: 0;
   margin-bottom: 100px;
-}
-.bmr-description {
-  min-width: 330px;
-  background: #457b9d;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.bmr-description {
+  min-width: 300px;
+  background: #457b9d;
 }
 
 .bmr-calculator-header {
@@ -48,4 +49,14 @@
   font-weight: bold;
 
   font-size: 25px;
+}
+
+.bmr-description,
+.BMRform {
+  width: 50%;
+  min-height: 400px;
+}
+.BMRform {
+  background: #e0fbfc;
+  min-width: 300px;
 }

@@ -34,7 +34,10 @@ const BMRcalculator=()=>{
                 </p>
                 
             </div>
+            <div className="BMRform">
             <BMRform />
+            </div>
+            
             
         </div>
         </div>
