@@ -14,7 +14,7 @@ const BMRcalculator=()=>{
                
              
                 <p className="content">
-                    BMR stands for <span class="highlight">B</span>asal <span class="highlight">M</span>etabolic <span class="highlight">R</span>ate.
+                    BMR stands for <span className="highlight">B</span>asal <span className="highlight">M</span>etabolic <span className="highlight">R</span>ate.
                     <br/>
                     It tells us how many calories we burn by going about our day.
                     <br/>
