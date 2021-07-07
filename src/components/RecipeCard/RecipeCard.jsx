@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect , useState } from 'react';
 import './RecipeCard.css';
-const RecipeCard = ({recipe})=>{
+const RecipeCard = ({recipe,openModal})=>{
+
+
+
     return(
         <div className="recipe-card">
             <img className="recipe-image" src={recipe.recipe.image} alt="recipe card"/>
@@ -14,7 +17,7 @@ const RecipeCard = ({recipe})=>{
                     + {Math.floor(recipe.recipe.calories) + ' cal'}
                 </button>
             </div>
-            <div className="view-more-container">
+            <div className="view-more-container" onClick={()=>(openModal(true))}>
                 <p>VIEW MORE</p>
             </div>
         </div>

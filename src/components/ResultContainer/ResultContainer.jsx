@@ -2,12 +2,12 @@ import React from 'react';
 import RecipeCard from '../RecipeCard/RecipeCard';
 import './ResultContainer.css';
 
-const ResultContainer =({recipes})=>{
+const ResultContainer =({recipes,openModal})=>{
     return(
         <div className="results-container">
             {
              recipes.map(recipe=>(
-                <RecipeCard recipe={recipe} />
+                <RecipeCard recipe={recipe} openModal={openModal} />
              ))   
             }
         </div>
