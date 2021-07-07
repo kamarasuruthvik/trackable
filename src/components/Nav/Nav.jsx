@@ -9,6 +9,13 @@ const Nav = ()=>{
                     Trackable 🎯
                 </p>
             </div>
+            <div className="nav-links">
+                <ul>
+                    <li>
+                        <p>Diet Chart</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }

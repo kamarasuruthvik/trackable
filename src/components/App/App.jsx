@@ -6,7 +6,11 @@ import Nav from '../Nav/Nav';
 import ResultContainer from '../ResultContainer/ResultContainer';
 import Search from '../Search/Search';
 import './App.css';
-
+import {BrowserRouter as Router, 
+        Switch, 
+        Route,
+        Link } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 const API_KEY = 
 '978571a3bc397cf4cf7d8b0aab69651d';
 const APP_ID= 
@@ -68,15 +72,26 @@ const App =()=>{
     }
     return(
         <div className="app-container">
+            <Router>
             <Nav/>
-            <IntroComponent/>
-            <BMRcalculator BMRchange= {BMRchange} />
-            {showModal&&<RecipeDetail showModal={showModal} closeModal={closeModal} />}
+            <Switch>
+                <Route path="/calculator">
+                    <Cart/>
+                </Route>
+                <Route path="/">
+                    <IntroComponent/>
+                    <BMRcalculator BMRchange= {BMRchange} />
+                    {showModal&&<RecipeDetail showModal={showModal} closeModal={closeModal} />}
             
-             <Search searchQuery={searchQuery} submitQuery={submitQuery} />
-            {
+                    <Search searchQuery={searchQuery} submitQuery={submitQuery} />
+                        {
                 loadingSpinner?<div className="loading-spinner"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>:<ResultContainer recipes={recipes} openModal={openModal} />
-            }
+                        }
+                    </Route>
+            </Switch>
+            </Router>
+            
+            
             
             
             

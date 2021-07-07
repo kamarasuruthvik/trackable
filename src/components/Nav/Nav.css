@@ -1,23 +1,36 @@
 .nav-container {
   font-family: "Cairo", sans-serif;
   margin: 0px;
+  width: 100%;
   /* width: 100%; */
   padding-left: 10%;
   padding-top: 8px;
   padding-bottom: 8px;
   background: #f5f3f4;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-header {
   padding: 0;
   margin: 0;
+  width: auto;
   color: #0b090a;
   font-size: 36px;
   font-weight: bold;
+  transition: all 0.2s ease-in;
 }
 p {
   padding: 0;
   margin: 0px;
-  width: auto;
+}
+.nav-links {
+}
+
+@media screen and (max-width: 900px) {
+  .nav-header {
+    font-size: 24px;
+  }
 }
