@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 import './BMRform.css';
 
 const BMRform = ()=>{
@@ -12,15 +12,17 @@ const BMRform = ()=>{
     const trackBMR= (e)=>{
         e.preventDefault();
         if(gender===1){
-            setBMR((66.47 + (13.75*weight) + (5.003*height) - (6.755*age)),()=>{console.log(BMR)});
+            setBMR((66.47 + (13.75*weight) + (5.003*height) - (6.755*age)));
             
         }
         else{
-            setBMR((655.1 + (9.563*weight) + (1.85*height)- (4.676*age)),()=>{console.log(BMR)});
+            setBMR((655.1 + (9.563*weight) + (1.85*height)- (4.676*age)));
             
         }
-        
     }
+    useEffect(()=>{
+        console.log(BMR)
+    },[BMR]);
     return(
 
         <div className="bmr-form">
