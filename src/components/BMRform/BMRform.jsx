@@ -1,7 +1,7 @@
 import React, { useState,useEffect} from 'react';
 import './BMRform.css';
 
-const BMRform = ()=>{
+const BMRform = ({BMRchange})=>{
 
     const [height,setHeight]= useState(-1);
     const [weight,setWeight]= useState(-1);
@@ -21,8 +21,10 @@ const BMRform = ()=>{
         }
     }
     useEffect(()=>{
-        console.log(BMR)
-    },[BMR]);
+        BMRchange(BMR);
+    },[BMR])
+
+
     return(
 
         <div className="bmr-form">

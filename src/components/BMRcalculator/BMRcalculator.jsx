@@ -2,7 +2,7 @@ import React from 'react';
 import BMRform from '../BMRform/BMRform';
 import './BMRcalculator.css';
 
-const BMRcalculator=()=>{
+const BMRcalculator=({BMRchange})=>{
     return(
         <div className="bmr">
             <div className="bmr-container">
@@ -35,7 +35,7 @@ const BMRcalculator=()=>{
                 
             </div>
             <div className="BMRform">
-            <BMRform />
+            <BMRform BMRchange={BMRchange} />
             </div>
             
             

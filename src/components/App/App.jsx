@@ -16,7 +16,7 @@ const App =()=>{
     const [ query, setQuery] = useState('');
     const [searchTerm,setSearchTerm]= useState('');
     const [loadingSpinner, setLoadingSpinner] = useState(false);
-
+    const [BMRvalue, setBMRvalue]= useState(0);
     const URL=
     'https://api.edamam.com/api/recipes/v2?type=public&q='+ query +'&app_id=d5f626b8&app_key=978571a3bc397cf4cf7d8b0aab69651d';
     
@@ -26,6 +26,9 @@ const App =()=>{
         getRecipes();
     },[query]);
 
+    useEffect(()=>{
+        console.log(BMRvalue);
+    },[BMRvalue])
 
     const getRecipes=async ()=>{
         const response = await fetch(URL);
@@ -45,12 +48,14 @@ const App =()=>{
         setLoadingSpinner(true);
         setQuery(searchTerm);
     }
-
+    const BMRchange=(BMR)=>{
+        setBMRvalue(BMR);
+    }
     return(
         <div className="app-container">
             <Nav/>
             <IntroComponent/>
-            <BMRcalculator/>
+            <BMRcalculator BMRchange= {BMRchange} />
 
              <Search searchQuery={searchQuery} submitQuery={submitQuery} />
             {
